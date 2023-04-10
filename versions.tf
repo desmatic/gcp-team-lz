@@ -1,0 +1,16 @@
+terraform {
+  required_version = ">=0.13"
+
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = ">= 4.0.0"
+    }
+    random = {
+      source = "hashicorp/random"
+    }
+  }
+  provider_meta "google" {
+    module_name = "blueprints/terraform/exported-krm/v0.1.0"
+  }
+}
